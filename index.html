@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A Very Important Question 🦋</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+
+      /* GREEN + LIGHT GREEN + WHITE */
+      background: linear-gradient(
+        135deg,
+        #2F6B4F,
+        #72B98A,
+        #A8D5BA,
+        #FFFFFF
+      );
+
+      overflow: hidden;
+      color: #234A36;
+    }
+
+    .card {
+      width: min(90%, 600px);
+      padding: 45px 35px;
+      text-align: center;
+
+      /* SOFT WHITE */
+      background: rgba(255, 255, 255, 0.95);
+
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(30, 80, 50, 0.25);
+      position: relative;
+      z-index: 2;
+      animation: popIn 0.7s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2F6B4F;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: none;
+      padding: 13px 28px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 18px rgba(30, 80, 50, 0.22);
+    }
+
+    /* DARK GREEN */
+    .yes {
+      background: #2F6B4F;
+      color: white;
+    }
+
+    /* LIGHT GREEN */
+    .no {
+      background: #A8D5BA;
+      color: #245437;
+    }
+
+    .message {
+      text-align: left;
+      margin-top: 20px;
+      padding: 25px;
+
+      /* VERY LIGHT GREEN */
+      background: #E4F4E9;
+
+      border-radius: 20px;
+      line-height: 1.7;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .signature {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #2F6B4F;
+    }
+
+    .side-note {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: #4C8060;
+      font-style: italic;
+    }
+
+    .butterfly {
+      position: fixed;
+      font-size: 30px;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .b1 {
+      top: 12%;
+      left: 10%;
+    }
+
+    .b2 {
+      top: 70%;
+      right: 10%;
+      animation-delay: 1.5s;
+    }
+
+    .b3 {
+      top: 20%;
+      right: 15%;
+      animation-delay: 3s;
+    }
+
+    .b4 {
+      bottom: 10%;
+      left: 15%;
+      animation-delay: 2s;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="butterfly b1">🦋</div>
+  <div class="butterfly b2">🦋</div>
+  <div class="butterfly b3">🦋</div>
+  <div class="butterfly b4">🦋</div>
+
+  <div class="card">
+
+    <!-- QUESTION SCREEN -->
+    <div id="questionScreen">
+
+      <h1>🦋 Is Sora a real butterfly?</h1>
+
+      <p id="questionText">
+        This is a very serious and important question.
+      </p>
+
+      <div class="buttons">
+        <button class="yes" onclick="sayYes()">Yes 🦋</button>
+        <button class="no" onclick="sayNo()">No</button>
+      </div>
+
+    </div>
+
+    <!-- MESSAGE SCREEN -->
+    <div id="messageScreen" class="hidden">
+
+      <h1>💌 A little message for Riyadh</h1>
+
+      <div class="message">
+
+        <p>
+          Dear Riyadh,
+        </p>
+
+        <p>
+          I love and care for you. However, you PMO, and I want to
+          slap you so many times. I don't think you like me as much
+          as I like you, but it doesn't matter.
+        </p>
+
+        <p>
+          I hope you are always safe, successful, and happy. I hope
+          you achieve whatever you desire and never stray away from Islam.
+        </p>
+
+        <p>
+          I hope whoever has wronged you receives their punishment
+          in this life and the next. I hope your heart is always at ease,
+          and you are in my prayers. I will make dua for you.
+        </p>
+
+        <p>
+          I hope you become a good person in the future and contribute
+          something good to the world.
+        </p>
+
+        <div class="signature">
+          Sincerely, Sana 🦋
+        </div>
+
+        <div class="side-note">
+          Side note: You are still a little bitch, but you're my little bitch. ♡
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function sayNo() {
+      const question = document.getElementById("questionText");
+
+      question.innerHTML = `
+        <strong>Wrong answer. </strong><br><br>
+        Use you are a f@g.
+      `;
+    }
+
+    function sayYes() {
+      document.getElementById("questionScreen").classList.add("hidden");
+      document.getElementById("messageScreen").classList.remove("hidden");
+    }
+
+  </script>
+
+</body>
+</html>
+```
